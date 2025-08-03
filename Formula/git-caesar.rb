@@ -5,11 +5,11 @@
 class GitCaesar < Formula
   desc "Encrypt/decrypt files passwordlessly using GitHub's public key."
   homepage "https://github.com/yoshi389111/git-caesar"
-  version "0.0.10"
+  version "1.0.0"
 
   on_macos do
-    url "https://github.com/yoshi389111/git-caesar/releases/download/v0.0.10/git-caesar_0.0.10_darwin_all.tar.gz", using: CurlDownloadStrategy
-    sha256 "4e19de46a05a0c35bc5e632980fa58f1ea141471f81e050b8808bbe3aa7cb6d4"
+    url "https://github.com/yoshi389111/git-caesar/releases/download/v1.0.0/git-caesar_1.0.0_darwin_all.tar.gz", using: CurlDownloadStrategy
+    sha256 "42399ff940fa7358f9e8ffca403712855bdc33a3b8243b7163d982d83e7bca9c"
 
     def install
       bin.install "git-caesar"
@@ -18,22 +18,22 @@ class GitCaesar < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yoshi389111/git-caesar/releases/download/v0.0.10/git-caesar_0.0.10_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "af4ac74fdc8a2f02ea7c8193b9e6a973a8551eaf847bb75a673a16f1b161f885"
+      url "https://github.com/yoshi389111/git-caesar/releases/download/v1.0.0/git-caesar_1.0.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7675120f67bbf375d5da2b3e65a67df7b631140841a845f3f37d23a4374622f0"
       def install
         bin.install "git-caesar"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/yoshi389111/git-caesar/releases/download/v0.0.10/git-caesar_0.0.10_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "8157101d795b738c4c28cadc204d01104e4d43918fee9380bd0258d6647bbe3b"
+      url "https://github.com/yoshi389111/git-caesar/releases/download/v1.0.0/git-caesar_1.0.0_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "b05017d8ec04b61b7a6ab971cbdeeca20e6adde7ac44d8266e1ed5e8cf9caede"
       def install
         bin.install "git-caesar"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yoshi389111/git-caesar/releases/download/v0.0.10/git-caesar_0.0.10_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "82696913773aee669246d6ecccb4116e161e3ff40dce59fc17310f64d21453a4"
+      url "https://github.com/yoshi389111/git-caesar/releases/download/v1.0.0/git-caesar_1.0.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "57daf8b1ea55687eb7a4aa59c13efc0cd967f79751b0adebede7057a5e264d6f"
       def install
         bin.install "git-caesar"
       end
